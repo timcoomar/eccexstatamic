@@ -1,0 +1,46 @@
+.section-title {
+  text-align:     center;
+  padding:        var(--heading-padding);
+  font-size:      clamp(25px, var(--modifier, 3vw), 35px);
+  text-transform: uppercase;
+  font-weight:    500;
+  letter-spacing: 1px;
+}
+
+.quote {
+  background:     var(--eccex-lightgray);
+  color:          black;
+  padding:        var(--heading-padding);
+  display:        grid;
+  font-weight:    200;
+  place-content:  center;
+  text-align:     center;
+  font-size:      1.5rem;
+  font-size:      clamp(20px, 3vw, 40px);
+  font-style:     italic;
+  font-family:    "PF Index", Arial, sans-serif;
+
+  p {
+    font-style:   normal;
+    color:        var(--eccex-purple);
+    padding-top:  .5rem;
+    font-size:    80%;
+    font-weight:  400;
+    font-family:  "PF DinText Pro", Arial, sans-serif;
+  }
+}
+
+[data*="aspect-ratio"] {
+  height:         0;
+  position:       relative;
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
+  overflow:       hidden;
+}
+
+[data*="aspect-ratio"] > * {
+  position:       absolute;
+  top:            0;
+  left:           0;
+  width:          100%;
+  height:         100%;
+}

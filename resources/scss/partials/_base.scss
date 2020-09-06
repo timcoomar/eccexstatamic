@@ -1,0 +1,28 @@
+body {
+  font-family: "PF DinText Pro", Arial, sans-serif;
+}
+
+////////////////
+// TYPOGRAPHY //
+////////////////
+
+/* Older browsers */
+html { font-size: 16px; }
+
+/* Modern browsers only need this one */
+
+@media screen and (min-width: 25em){
+  html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+}
+
+/* More Modern: */
+
+html {
+  font-size: min(max(16px, 4vw), 22px);
+}
+
+/* Super Modern */
+
+body {
+  font-size: clamp(16px, 4vw, 22px);
+} 

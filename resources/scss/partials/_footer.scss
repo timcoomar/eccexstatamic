@@ -1,0 +1,26 @@
+.site-footer {
+  margin-top: var(--body-padding);
+  background: var(--eccex-lightgray);
+  padding:    var(--heading-padding);
+
+  display:    grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap:   1rem;
+  text-align: center;
+}
+
+.section-footer > * + * {
+  margin-top:   .5rem;
+  display:      block;
+  color:        var(--eccex-midgray);
+  font-size:    .7rem;
+  font-weight:  lighter;
+  list-style:   none;
+  padding:      0;
+}
+
+.section-footer__title {
+  text-transform:   uppercase;
+  font-weight:      500;
+  font-size:        .8rem;
+}

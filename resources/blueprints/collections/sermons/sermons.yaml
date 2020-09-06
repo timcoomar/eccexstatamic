@@ -1,0 +1,96 @@
+title: Μηνύματα
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+      -
+        handle: content
+        field:
+          type: markdown
+          display: Content
+          localizable: true
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+      -
+        handle: author
+        field:
+          type: users
+          display: Author
+          default: current
+          localizable: true
+          max_items: 1
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+      -
+        handle: youtube
+        field:
+          type: video
+          localizable: false
+          listable: hidden
+          display: Youtube
+      -
+        handle: preacher
+        field:
+          mode: default
+          taxonomies:
+            - preacher
+          type: terms
+          localizable: false
+          listable: hidden
+          display: Preacher
+      -
+        handle: sermon_series
+        field:
+          mode: default
+          taxonomies:
+            - sermon_series
+          type: terms
+          localizable: false
+          listable: hidden
+          display: 'Sermon Series'
+      -
+        handle: bible_book
+        field:
+          mode: default
+          taxonomies:
+            - bible_book
+          type: terms
+          localizable: false
+          listable: hidden
+          display: 'Bible Book'
+      -
+        handle: soundcloud
+        field:
+          theme: material
+          mode: htmlmixed
+          indent_type: tabs
+          indent_size: 4
+          key_map: default
+          line_numbers: true
+          line_wrapping: true
+          type: code
+          instructions: 'Paste the Soundcloud embed code here'
+          localizable: false
+          listable: hidden
+          display: Soundcloud

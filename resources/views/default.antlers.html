@@ -1,0 +1,25 @@
+<header class="header-main">
+
+  {{ partial:partials/nav-main }}
+
+  {{ if hero_image }}
+
+    {{ hero_image }}
+      <div class="hero-image" data="aspect-ratio" style="--aspect-ratio: 5/2">
+        <span>
+          <img src="{{ url }}" alt="{{ alt }}">
+        </span>
+      </div>
+    {{ /hero_image }}
+
+  {{ /if }}
+
+</header>
+
+<main class="content-main">
+
+{{ content }}
+
+</main>
+
+{{ partial:partials/footer }}

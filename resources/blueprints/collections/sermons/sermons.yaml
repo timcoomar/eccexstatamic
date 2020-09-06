@@ -24,6 +24,17 @@ sections:
           display: Content
           localizable: true
       -
+        handle: image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          listable: hidden
+          display: Image
+      -
         handle: template
         field:
           type: template
@@ -37,17 +48,6 @@ sections:
           default: current
           localizable: true
           max_items: 1
-      -
-        handle: image
-        field:
-          mode: grid
-          container: assets
-          restrict: false
-          allow_uploads: true
-          max_files: 1
-          type: assets
-          listable: hidden
-          display: Image
   sidebar:
     display: Sidebar
     fields:

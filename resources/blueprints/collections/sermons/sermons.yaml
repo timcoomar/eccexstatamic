@@ -30,12 +30,6 @@ sections:
           display: Content
           localizable: true
       -
-        handle: template
-        field:
-          type: template
-          display: Template
-          localizable: true
-      -
         handle: author
         field:
           type: users

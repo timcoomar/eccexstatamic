@@ -1,5 +1,5 @@
 title: Μηνύματα
-template: default
+template: sermon
 route: '{mount}/{slug}'
 layout: layout
 mount: e71bb762-5f8f-4a91-9ce2-0e865e52b4a3

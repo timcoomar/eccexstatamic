@@ -8,6 +8,8 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         handle: content
         field:
@@ -22,9 +24,17 @@ sections:
           allow_uploads: true
           max_files: 1
           type: assets
-          localizable: false
           listable: hidden
           display: 'Hero Image'
+      -
+        handle: template
+        field:
+          hide_partials: true
+          type: template
+          listable: hidden
+          display: Template
+          if:
+            title: 'equals Μηνύματα'
   sidebar:
     display: Sidebar
     fields:
@@ -34,6 +44,8 @@ sections:
           type: slug
           required: true
           localizable: true
+          validate:
+            - required
       -
         handle: parent
         field:
@@ -42,3 +54,4 @@ sections:
             - pages
           max_items: 1
           listable: false
+          localizable: true

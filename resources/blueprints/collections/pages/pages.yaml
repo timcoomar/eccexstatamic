@@ -33,8 +33,6 @@ sections:
           type: template
           listable: hidden
           display: Template
-          if:
-            title: 'equals Μηνύματα'
   sidebar:
     display: Sidebar
     fields:

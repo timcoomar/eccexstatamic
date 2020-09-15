@@ -5,6 +5,7 @@ layout: layout
 mount: e71bb762-5f8f-4a91-9ce2-0e865e52b4a3
 revisions: false
 date: true
+search_index: sermons
 sort_dir: asc
 date_behavior:
   past: public

@@ -5,6 +5,8 @@ search_index: sermons
 mount: e71bb762-5f8f-4a91-9ce2-0e865e52b4a3
 taxonomies:
   - preacher
+  - bible_book
+  - sermon_series
 revisions: false
 route: '{mount}/{slug}'
 date: true

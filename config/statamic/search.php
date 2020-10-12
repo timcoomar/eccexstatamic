@@ -31,6 +31,12 @@ return [
             'fields' => ['title'],
         ],
 
+        'sermons' => [
+            'driver' => 'local',
+            'searchables' => ['collection:sermons', 'taxonomy:preacher'],
+            'fields' => ['title'],
+        ],
+
         // 'blog' => [
         //     'driver' => 'local',
         //     'searchables' => 'collection:blog',

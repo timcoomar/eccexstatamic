@@ -1,0 +1,61 @@
+// SINGLE SERMON  PAGE
+
+.sermon-header {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 1em;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.sermon-info {
+  padding:   0.5em 1em 0.5em 0;
+}
+.sermon-info__title {
+  font-size: 1.8rem;
+}
+.sermon-info__date {
+  font-size: .8rem;
+  font-style: italic;
+}
+.sermon-info__audio {
+  padding:    1em 0 0
+}
+.youtube-embed {
+  width: 100%;
+  height: 100%;
+}
+
+// SERMONS LIST PAGE
+
+.sermons-header {
+  display:  flex;
+  justify-content: space-between;
+}
+
+.sermons-header__title {
+  font-size:  clamp(25px, 4vw, 30px);
+}
+
+.sermons-list {
+  display:                  grid;
+  grid-template-columns:    repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap:                 1em;
+}
+
+.sermons-list__sermon {
+  border:           1px solid var(--eccex-lightgray);
+  padding:          .6em;
+}
+
+.sermons-pagination {
+  width:            100%;
+  display:          flex;
+  justify-content:  space-between;
+}
+
+.tag-list {
+  select {
+    border: 1px solid var(--eccex-midgray);
+    border-radius: .25em;
+    padding:        .15em .5em 0;
+  }
+}

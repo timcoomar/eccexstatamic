@@ -1,7 +1,7 @@
 <header class="header-main header-home">
   {{ partial:partials/nav-main }}
   <div class="header-home__content">
-    {{ content }}
+    <!--{{ content }}-->
     <span class="scrolldown">
       ⮁
     </span>
@@ -17,49 +17,29 @@
 <section class="home-sermons">
   <svg version="1.1" width="0" height="0">
     <filter id="filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
-	    <feMorphology operator="erode" radius="1 2" x="0%" y="0%" width="100%" height="100%" in="dropShadow" result="morphology1"/>
+	    <feMorphology operator="erode" radius="1 1" x="0%" y="0%" width="100%" height="100%" in="dropShadow" result="morphology1"/>
     </filter>
   </svg>
-  <figure class="home-sermons__item">
-    <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3">
-      <span>
-        <img src="https://images.pexels.com/photos/4584411/pexels-photo-4584411.jpeg" loading="lazy">
+  {{ collection from="sermons" limit="4" }}
+    <figure class="home-sermons__item">
+      <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3">
+        <span>
+          <a href="{{ url }}">
+            <img src="{{ splash:sermon_image width='400' }}" loading="lazy">
+          </a>
+        </span>
+      </div>
+      <h3 class="home-sermons__title">
+        <a href="{{ permalink }}">{{ title }}</a>
+      </h3>
+      <date class="home-sermons__date">{{ date }}</date>
+      <span class="home-sermons__preacher">
+        {{ preacher }}
+          <a href="{{ url }}">{{ title }}</a>
+        {{ /preacher }}
       </span>
-    </div>
-    <h3 class="home-sermons__title">Η παραβολή για τους δύο χρεώστες</h3>
-    <date class="home-sermons__date">14 Οκτωβρίου 2018</date>
-    <span class="home-sermons__preacher">Τιμόθεος Κούμαρ</span>
-  </figure>
-  <figure class="home-sermons__item">
-    <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3">
-      <span>
-        <img src="https://images.pexels.com/photos/3772614/pexels-photo-3772614.jpeg" loading="lazy">
-      </span>
-    </div>
-    <h3 class="home-sermons__title">Η παραβολή του άδικου δούλου</h3>
-    <date class="home-sermons__date">7 Οκτωβρίου 2018</date>
-    <span class="home-sermons__preacher">Αλέξανδρος Πιπιλιός</span>
-  </figure>
-  <figure class="home-sermons__item">
-    <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3">
-      <span>
-        <img src="https://images.pexels.com/photos/66627/pexels-photo-66627.jpeg" loading="lazy">
-      </span>
-    </div>
-    <h3 class="home-sermons__title">Ο άσωτος γιος</h3>
-    <date class="home-sermons__date">30 Σεπτεμβρίου 2018</date>
-    <span class="home-sermons__preacher">Σπύρος Μπιλέρος</span>
-  </figure>
-  <figure class="home-sermons__item">
-    <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3">
-      <span>
-        <img src="https://images.pexels.com/photos/40384/einkorn-grain-field-einkorn-wheat-40384.jpeg" loading="lazy">
-      </span>
-    </div>
-    <h3 class="home-sermons__title">Ο σπορέας</h3>
-    <date class="home-sermons__date">23 Σεπτεμβρίου 2018</date>
-    <span class="home-sermons__preacher">Τιμόθεος Κούμαρ</span>
-  </figure>
+    </figure>
+  {{ /collection }}
 </section>
 
 {{ partial:partials/footer }}

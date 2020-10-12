@@ -1,0 +1,47 @@
+<header class="header-main header-sermon">
+
+  {{ partial:partials/nav-main }}
+
+  <div class="sermon-header">
+
+    <figure class="sermon-image">
+      {{ if youtube | is_embeddable }}
+        <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
+          <span>
+            <iframe src="{{ youtube | embed_url }}" class="youtube-embed"></iframe>
+          </span>
+        </div>
+      {{ else }}
+        {{ sermon_image }}
+          <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
+            <span>
+              <img src="{{ splash:sermon_image width='900' }}">
+            </span>
+          </div>
+        {{ /sermon_image }}
+      {{ /if }}
+    </figure>
+    <aside class="sermon-info">
+      <h2 class="sermon-info__title">{{ title }}</h2>
+      <date class="sermon-info__date">{{ date }}</date>
+      <div class="sermon-info__preacher">
+        {{ preacher }}
+          {{ title }}
+        {{ /preacher }}
+      </div>
+      <div class="sermon-info__audio">
+        {{ soundcloud }}
+      </div>
+    </aside>
+
+  </div>
+
+</header>
+
+<main class="content-main">
+
+{{ content }}
+
+</main>
+
+{{ partial:partials/footer }}

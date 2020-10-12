@@ -5,12 +5,12 @@
   <input type=checkbox id="burger">
   <label class="burger-label" for="burger">&#9776;</label>
   <ul class="menu-main">
-    {{ nav }}
+    {{ nav:main_nav }}
       <li>
         <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ /if }}>
           {{ title }}
         </a>
       </li>
-    {{ /nav }}
+    {{ /nav:main_nav }}
   </ul>
 </nav>

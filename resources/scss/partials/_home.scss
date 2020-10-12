@@ -27,12 +27,13 @@
 
 .scrolldown {
   position:         absolute;
-  bottom:           3rem;
+  bottom:           2rem;
   left:             50%;
   display:          block;
   width:            4rem;
   transform:        translateX(-2rem) rotateZ(90deg);
-  font-size:        3.5rem;
+  font-size:        2rem;
+  opacity:          .8;
 }
 
 .home-sermons {

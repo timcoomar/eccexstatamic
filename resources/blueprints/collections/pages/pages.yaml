@@ -33,6 +33,20 @@ sections:
           type: template
           listable: hidden
           display: Template
+      -
+        handle: quote
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          display: Quote
+          type: markdown
+          icon: markdown
+          listable: hidden
+          if_any:
+            title: 'equals Αρχικη'
   sidebar:
     display: Sidebar
     fields:

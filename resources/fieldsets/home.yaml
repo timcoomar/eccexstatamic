@@ -1,2 +1,13 @@
 title: Home
-fields: {  }
+fields:
+  -
+    handle: home_slider
+    field:
+      mode: grid
+      container: assets
+      restrict: false
+      allow_uploads: true
+      display: 'Home Slider'
+      type: assets
+      icon: assets
+      listable: hidden

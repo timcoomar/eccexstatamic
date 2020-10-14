@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd03155c4a29fe2ea5b8f3a9b4cb2016",
+    "content-hash": "6eb015a4dece7aaeccdba5168f710ac5",
     "packages": [
         {
             "name": "aryehraber/statamic-splash",
@@ -3437,16 +3437,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.0.16",
+            "version": "v3.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "c256d5736e38d5b31146c3bbab19361419f9f9a9"
+                "reference": "029db37715cdca46aed927e1ad541a7efb37ef16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/c256d5736e38d5b31146c3bbab19361419f9f9a9",
-                "reference": "c256d5736e38d5b31146c3bbab19361419f9f9a9",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/029db37715cdca46aed927e1ad541a7efb37ef16",
+                "reference": "029db37715cdca46aed927e1ad541a7efb37ef16",
                 "shasum": ""
             },
             "require": {
@@ -3513,7 +3513,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-06T22:29:54+00:00"
+            "time": "2020-10-13T21:30:33+00:00"
         },
         {
             "name": "statamic/stringy",

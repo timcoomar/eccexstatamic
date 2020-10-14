@@ -11,3 +11,4 @@ preferences:
         - preacher
         - sermon_series
         - bible_book
+      per_page: 100

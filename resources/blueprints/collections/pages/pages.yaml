@@ -47,6 +47,8 @@ sections:
           listable: hidden
           if_any:
             title: 'equals Αρχικη'
+      -
+        import: home
   sidebar:
     display: Sidebar
     fields:

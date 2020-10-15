@@ -1,110 +1,114 @@
-<header class="header-main">
+<div class="site-width">
 
-  {{ partial:partials/nav-main }}
+  <header class="header-main">
 
-  {{ if hero_image }}
+    {{ partial:partials/nav-main }}
 
-    {{ hero_image }}
-      <div class="hero-image" data="aspect-ratio" style="--aspect-ratio: 5/2">
-        <span>
-          <img src="{{ url }}" alt="{{ alt }}">
-        </span>
-      </div>
-    {{ /hero_image }}
+    {{ if hero_image }}
 
-  {{ /if }}
+      {{ hero_image }}
+        <div class="hero-image" data="aspect-ratio" style="--aspect-ratio: 5/2">
+          <span>
+            <img src="{{ url }}" alt="{{ alt }}">
+          </span>
+        </div>
+      {{ /hero_image }}
 
-</header>
-
-<main class="content-main">
-
-  <header class="sermons-header">
-
-    <h2 class="sermons-header__title">{{ title }}</h2>
-
-    <div class="search-form">
-      <form action="/results">
-        <input type="search" name="q" placeholder="Search">
-        <button type="submit">Go</button>
-      </form>
-    </div>
+    {{ /if }}
 
   </header>
 
-  <section class="sermons-list">
+  <main class="content-main">
 
-    {{ collection:sermons limit="6" paginate="true" as="posts" }}
+    <header class="sermons-header">
 
-      {{ if no_results }}
-          <p>Aww, there are no results.</p>
-      {{ /if }}
+      <h2 class="sermons-header__title">{{ title }}</h2>
 
-      {{ posts }}
-
-        <article class="sermons-list__sermon">
-          {{ sermon_image }}
-            <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
-              <span>
-                <a href="{{ permalink }}">
-                  <img src="{{ splash:sermon_image width='400' }}">
-                </a>
-              </span>
-            </div>
-          {{ /sermon_image }}
-          <h2 class="sermons-list__title">
-            <a href="{{ permalink }}">{{ title }}</a>
-          </h2>
-          <date class="sermons-list__date">{{ date }}</date>
-          <div class="sermons-list__preacher">
-            {{ preacher }}
-              <a href="{{ permalink }}">{{ title }}</a>
-            {{ /preacher }}
-          </div>
-          <div class="sermons-list__audio">
-            {{ soundcloud }}
-          </div>
-        </article>
-
-      {{ /posts }}
-
-      </section>
-
-      <div class="tag-list">
-        <select name="preachers" onchange="location=this.value;">
-            <option disabled selected value> -- Ομιλητές -- </option>
-          {{ taxonomy:preacher }}
-            <option value="/sermons{{ url }}">{{ title }}</option>
-          {{ /taxonomy:preacher }}
-        </select>
-        <select name="book" onchange="location=this.value;">
-            <option disabled selected value> -- Βιβλίο -- </option>
-          {{ taxonomy:bible_book }}
-            <option value="/sermons{{ url }}">{{ title }}</option>
-          {{ /taxonomy:bible_book }}
-        </select>
-        <select name="series" onchange="location=this.value;">
-            <option disabled selected value> -- Σειρές -- </option>
-          {{ taxonomy:sermon_series }}
-            <option value="/sermons{{ url }}">{{ title }}</option>
-          {{ /taxonomy:sermon_series }}
-        </select>
+      <div class="search-form">
+        <form action="/results">
+          <input type="search" name="q" placeholder="Search">
+          <button type="submit">Go</button>
+        </form>
       </div>
 
-      {{ paginate }}
-        <div class="sermons-pagination">
-          <a href="{{ prev_page }}">⬅</a>
+    </header>
 
-          {{ current_page }} από {{ total_pages }} σελίδες
-          (Σύνολο {{ total_items }} κηρύγματα)
+    <section class="sermons-list">
 
-          <a href="{{ next_page }}">➡</a>
+      {{ collection:sermons limit="9" paginate="true" as="posts" }}
+
+        {{ if no_results }}
+            <p>Aww, there are no results.</p>
+        {{ /if }}
+
+        {{ posts }}
+
+          <article class="sermons-list__sermon">
+            {{ sermon_image }}
+              <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
+                <span>
+                  <a href="{{ permalink }}">
+                    <img src="{{ splash:sermon_image width='400' }}">
+                  </a>
+                </span>
+              </div>
+            {{ /sermon_image }}
+            <h2 class="sermons-list__title">
+              <a href="{{ permalink }}">{{ title }}</a>
+            </h2>
+            <date class="sermons-list__date">{{ date }}</date>
+            <div class="sermons-list__preacher">
+              {{ preacher }}
+                <a href="{{ permalink }}">{{ title }}</a>
+              {{ /preacher }}
+            </div>
+            <div class="sermons-list__audio">
+              {{ soundcloud }}
+            </div>
+          </article>
+
+        {{ /posts }}
+
+        </section>
+
+        <div class="tag-list">
+          <select name="preachers" onchange="location=this.value;">
+              <option disabled selected value> -- Ομιλητές -- </option>
+            {{ taxonomy:preacher }}
+              <option value="/sermons{{ url }}">{{ title }}</option>
+            {{ /taxonomy:preacher }}
+          </select>
+          <select name="book" onchange="location=this.value;">
+              <option disabled selected value> -- Βιβλίο -- </option>
+            {{ taxonomy:bible_book }}
+              <option value="/sermons{{ url }}">{{ title }}</option>
+            {{ /taxonomy:bible_book }}
+          </select>
+          <select name="series" onchange="location=this.value;">
+              <option disabled selected value> -- Σειρές -- </option>
+            {{ taxonomy:sermon_series }}
+              <option value="/sermons{{ url }}">{{ title }}</option>
+            {{ /taxonomy:sermon_series }}
+          </select>
         </div>
-      {{ /paginate }}
 
-    {{ /collection:sermons }}
+        {{ paginate }}
+          <div class="sermons-pagination">
+            <a href="{{ prev_page }}">⬅</a>
 
-  
+            {{ current_page }} από {{ total_pages }} σελίδες
+            (Σύνολο {{ total_items }} κηρύγματα)
 
-</main>
+            <a href="{{ next_page }}">➡</a>
+          </div>
+        {{ /paginate }}
 
-{{ partial:partials/footer }}
+      {{ /collection:sermons }}
+
+    
+
+  </main>
+
+  {{ partial:partials/footer }}
+
+</div> <!-- /site-width -->

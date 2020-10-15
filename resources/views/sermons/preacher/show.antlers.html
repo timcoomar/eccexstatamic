@@ -1,44 +1,48 @@
-<header class="header-main">
+<div class="site-width">
 
-  {{ partial:partials/nav-main }}
+  <header class="header-main">
 
-</header>
-
-<main class="content-main">
-
-  <header class="sermons-header">
-
-    <h2 class="sermons-header__title">Ομιλητής: {{ title }}</h2>
-
-    <div class="search-form">
-      <form action="/results">
-        <input type="search" name="q" placeholder="Search">
-        <button type="submit">Go</button>
-      </form>
-    </div>
+    {{ partial:partials/nav-main }}
 
   </header>
 
-  <section class="sermons-list">
+  <main class="content-main">
 
-    {{ entries }}
-      {{ collection:sermons limit="6" paginate="true" as="posts" }}
-        <div>
-            <h2>
-                <a href="{{ url }}">
-                    {{ title | widont }}
-                </a>
-            </h2>
-            <p>
-                <span>{{ date }}</span>
-                {{ excerpt | widont ?? content | strip_tags | safe_truncate:160:...}}
-            </p>
-        </div>
-        {{ /collection:sermons }}
-      {{ /entries }}
+    <header class="sermons-header">
 
-  </section>
+      <h2 class="sermons-header__title">Ομιλητής: {{ title }}</h2>
 
-</main>
+      <div class="search-form">
+        <form action="/results">
+          <input type="search" name="q" placeholder="Search">
+          <button type="submit">Go</button>
+        </form>
+      </div>
 
-{{ partial:partials/footer }}
+    </header>
+
+    <section class="sermons-list">
+
+      {{ entries }}
+        {{ collection:sermons limit="9" paginate="true" as="posts" }}
+          <div>
+              <h2>
+                  <a href="{{ url }}">
+                      {{ title | widont }}
+                  </a>
+              </h2>
+              <p>
+                  <span>{{ date }}</span>
+                  {{ excerpt | widont ?? content | strip_tags | safe_truncate:160:...}}
+              </p>
+          </div>
+          {{ /collection:sermons }}
+        {{ /entries }}
+
+    </section>
+
+  </main>
+
+  {{ partial:partials/footer }}
+
+</div> <!-- /site-width -->

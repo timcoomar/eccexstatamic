@@ -7,10 +7,8 @@
     <title>{{ title ?? site:name }}</title>
     <link rel="stylesheet" href="/css/site.css">
   </head>
-  <body>
-    <div class="site-width">
-      {{ template_content }}
-    </div>
+  <body class="{{ template }}">
+    {{ template_content }}
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="/js/accents-min.js"></script>

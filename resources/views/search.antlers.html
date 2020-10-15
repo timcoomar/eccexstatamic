@@ -1,26 +1,30 @@
-<header class="header-main">
+<div class="site-width">
 
-  {{ partial:partials/nav-main }}
+  <header class="header-main">
 
-</header>
+    {{ partial:partials/nav-main }}
 
-<main class="content-main">
+  </header>
 
-  {{ search:results }}
+  <main class="content-main">
 
-    {{ if no_results }}
-      <h2>No results.</h2>
-    {{ else }}
+    {{ search:results }}
 
-      <a href="{{ url }}" class="result">
-        <h2>{{ title }}</h2>
-        <p>{{ content | truncate:240 }}</p>
-      </a>
+      {{ if no_results }}
+        <h2>No results.</h2>
+      {{ else }}
 
-    {{ /if }}
+        <a href="{{ url }}" class="result">
+          <h2>{{ title }}</h2>
+          <p>{{ content | truncate:240 }}</p>
+        </a>
 
-  {{ /search:results }}
+      {{ /if }}
 
-</main>
+    {{ /search:results }}
 
-{{ partial:partials/footer }}
+  </main>
+
+  {{ partial:partials/footer }}
+
+</div> <!-- /site-width -->

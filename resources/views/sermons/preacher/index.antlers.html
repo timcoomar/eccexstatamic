@@ -1,36 +1,40 @@
-<header class="header-main">
+<div class="site-width">
 
-  {{ partial:partials/nav-main }}
+  <header class="header-main">
 
-</header>
-
-<main class="content-main">
-
-  <header class="sermons-header">
-
-    <h2 class="sermons-header__title">Ομιλητής: {{ title }}</h2>
-
-    <div class="search-form">
-      <form action="/results">
-        <input type="search" name="q" placeholder="Search">
-        <button type="submit">Go</button>
-      </form>
-    </div>
+    {{ partial:partials/nav-main }}
 
   </header>
 
-  <section class="sermons-list">
+  <main class="content-main">
 
-    <div>
-        <article>
-            {{ taxonomy:preacher }}
-                <h2><a href="{{ url }}">{{ title }}</a></h2>
-            {{ /taxonomy:preacher }}
-        </article>
-    </div>
+    <header class="sermons-header">
 
-  </section>
+      <h2 class="sermons-header__title">Ομιλητής: {{ title }}</h2>
 
-</main>
+      <div class="search-form">
+        <form action="/results">
+          <input type="search" name="q" placeholder="Search">
+          <button type="submit">Go</button>
+        </form>
+      </div>
 
-{{ partial:partials/footer }}
+    </header>
+
+    <section class="sermons-list">
+
+      <div>
+          <article>
+              {{ taxonomy:preacher }}
+                  <h2><a href="{{ url }}">{{ title }}</a></h2>
+              {{ /taxonomy:preacher }}
+          </article>
+      </div>
+
+    </section>
+
+  </main>
+
+  {{ partial:partials/footer }}
+
+</div> <!-- /site-width -->

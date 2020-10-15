@@ -12,3 +12,6 @@ preferences:
         - sermon_series
         - bible_book
       per_page: 100
+  assets:
+    assets:
+      mode: grid

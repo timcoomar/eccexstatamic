@@ -4,3 +4,4 @@ roles:
 groups:
   - staff
 id: b64c0219-b2c1-463e-bb90-a11e44ad2039
+password_hash: $2y$10$ggA3jbH3h7vcY9jFnLFas.HHhBrkyA0SsjmvJrBCuYaeoJYcS35CO

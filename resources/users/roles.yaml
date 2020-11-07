@@ -1,4 +1,34 @@
-# admin:
-#   title: Administrator
-#   permissions:
-#     - super
+editor:
+  title: Editor
+  permissions:
+    - 'access cp'
+    - 'view pages entries'
+    - 'edit pages entries'
+    - 'create pages entries'
+    - 'delete pages entries'
+    - 'publish pages entries'
+    - 'reorder pages entries'
+    - 'view sermons entries'
+    - 'edit sermons entries'
+    - 'create sermons entries'
+    - 'delete sermons entries'
+    - 'publish sermons entries'
+    - 'reorder sermons entries'
+    - 'view bible_book terms'
+    - 'edit bible_book terms'
+    - 'create bible_book terms'
+    - 'delete bible_book terms'
+    - 'view preacher terms'
+    - 'edit preacher terms'
+    - 'create preacher terms'
+    - 'delete preacher terms'
+    - 'view sermon_series terms'
+    - 'edit sermon_series terms'
+    - 'create sermon_series terms'
+    - 'delete sermon_series terms'
+    - 'view assets assets'
+    - 'upload assets assets'
+    - 'edit assets assets'
+    - 'move assets assets'
+    - 'rename assets assets'
+    - 'delete assets assets'

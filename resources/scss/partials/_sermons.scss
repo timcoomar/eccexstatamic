@@ -44,6 +44,23 @@
 .sermons-list__sermon {
   border:           1px solid var(--eccex-lightgray);
   padding:          .6em;
+  position:         relative;
+}
+
+.home-sermons__image {
+  margin-top:       0;
+}
+
+.sermons-list__series-title {
+  position:         absolute;
+  top:              1rem;
+  left:             1rem;
+  text-transform:   uppercase;
+  background:     rgba(255,255,255,0.65);
+  z-index:          2;
+  padding:          .1em .3em;
+  font-size:        .5rem; // for older browsers
+  font-size:        clamp(.55rem, 1.5vw, .65rem);
 }
 
 .sermons-pagination {

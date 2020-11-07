@@ -44,15 +44,30 @@
         {{ posts }}
 
           <article class="sermons-list__sermon">
+            
             {{ sermon_image }}
               <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
                 <span>
-                  <a href="{{ permalink }}">
+                  <a href="{{ permalink }}" class="test">
                     <img src="{{ splash:sermon_image width='400' }}">
                   </a>
                 </span>
               </div>
             {{ /sermon_image }}
+
+            {{ if sermon_image:exists="false" }}
+
+              <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
+                <span>
+                  <a href="{{ permalink }}">
+                    <!--<img src="{{ splash:sermon_image width='400' }}">-->
+                    <p>Test></p>
+                  </a>
+                </span>
+              </div>
+
+            {{ /if }}
+            
             <h2 class="sermons-list__title">
               <a href="{{ permalink }}">{{ title }}</a>
             </h2>

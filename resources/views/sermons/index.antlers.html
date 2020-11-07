@@ -44,15 +44,37 @@
         {{ posts }}
 
           <article class="sermons-list__sermon">
-            {{ sermon_image }}
+            <h4 class="sermons-list__series-title">
+              {{ sermon_series }}
+                <a href="{{ url }}">{{ title }}</a>
+              {{ /sermon_series }}
+            </h4>
+
+            {{ if sermon_image }}
+            
+              {{ sermon_image }}
+                <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
+                  <span>
+                    <a href="{{ permalink }}">
+                      <img src="{{ splash:sermon_image width='400' }}">
+                    </a>
+                  </span>
+                </div>
+              {{ /sermon_image }}
+            
+            {{ else }}
+
               <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
                 <span>
                   <a href="{{ permalink }}">
-                    <img src="{{ splash:sermon_image width='400' }}">
+                    {{ asset url="/assets/sermon-placeholder.jpg" }}
+                      <img src="{{ url }}">
+                    {{ /asset }}
                   </a>
                 </span>
               </div>
-            {{ /sermon_image }}
+
+            {{ /if }}
             <h2 class="sermons-list__title">
               <a href="{{ permalink }}">{{ title }}</a>
             </h2>

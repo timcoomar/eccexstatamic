@@ -11,6 +11,7 @@ preferences:
         - preacher
         - sermon_series
         - bible_book
+        - author
       per_page: 100
   assets:
     assets:

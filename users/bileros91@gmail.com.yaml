@@ -9,6 +9,3 @@ preferences:
   collections:
     sermons:
       per_page: 100
-  taxonomies:
-    sermon_series:
-      after_save: create_another

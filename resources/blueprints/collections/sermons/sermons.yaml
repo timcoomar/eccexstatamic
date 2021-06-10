@@ -57,30 +57,30 @@ sections:
       -
         handle: preacher
         field:
-          mode: default
+          type: terms
           taxonomies:
             - preacher
-          type: terms
-          listable: hidden
           display: Preacher
+          mode: default
+          listable: hidden
       -
         handle: sermon_series
         field:
-          mode: default
+          type: terms
           taxonomies:
             - sermon_series
-          type: terms
-          listable: hidden
           display: 'Sermon Series'
+          mode: default
+          listable: hidden
       -
         handle: bible_book
         field:
-          mode: default
+          type: terms
           taxonomies:
             - bible_book
-          type: terms
-          listable: hidden
           display: 'Bible Book'
+          mode: default
+          listable: hidden
       -
         handle: soundcloud
         field:

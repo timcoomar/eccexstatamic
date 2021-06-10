@@ -3,16 +3,3 @@ revisions: false
 route: '{parent_uri}/{slug}'
 structure:
   root: true
-  tree:
-    -
-      entry: home
-    -
-      entry: f2062965-258c-4b00-ad27-3da257702384
-    -
-      entry: fd09b910-0bca-4c1c-8c29-0d8e22eae23c
-    -
-      entry: e71bb762-5f8f-4a91-9ce2-0e865e52b4a3
-    -
-      entry: 8b34715a-6838-4c21-bc77-1d7ae3b1f3cc
-    -
-      entry: 97aee319-3501-406e-8785-6a4c60262d37

@@ -1,0 +1,8 @@
+name: 'Amalia Georgiadi'
+super: true
+id: 1af4a399-e484-44c6-bacb-a28934b58d98
+password_hash: $2y$10$/i4H4m9QyXPF3pV.DnJQDOrxt9EY7DVdKJQDEOjDZhEzgPQv45kW.
+preferences:
+  assets:
+    assets:
+      mode: grid

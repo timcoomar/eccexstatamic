@@ -6,3 +6,6 @@ preferences:
   assets:
     assets:
       mode: grid
+  collections:
+    sermons:
+      per_page: 100

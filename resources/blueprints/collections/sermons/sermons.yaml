@@ -37,6 +37,20 @@ sections:
           default: current
           localizable: true
           max_items: 1
+      -
+        handle: custom_image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Custom Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
   sidebar:
     display: Sidebar
     fields:
@@ -44,7 +58,6 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required

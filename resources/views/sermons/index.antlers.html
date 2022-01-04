@@ -50,8 +50,20 @@
               {{ /sermon_series }}
             </h4>
 
-            {{ if sermon_image }}
+            {{ if custom_image }}
             
+              {{ custom_image }}
+                <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
+                  <span>
+                    <a href="{{ permalink }}">
+                      <img src="{{ url }}">
+                    </a>
+                  </span>
+                </div>
+              {{ /custom_image }}
+
+            {{ elseif sermon_image }}
+
               {{ sermon_image }}
                 <div class="home-sermons__image" data="aspect-ratio" style="--aspect-ratio: 5/3.2">
                   <span>
@@ -75,6 +87,7 @@
               </div>
 
             {{ /if }}
+
             <h2 class="sermons-list__title">
               <a href="{{ permalink }}">{{ title }}</a>
             </h2>
